@@ -27,7 +27,7 @@ var weapon = ['None',
               'Tommy Gun',
               'double-barrel',
               'pump-shotgun',
-              'SK12',
+              'S12K',
               'M249',
               'Crossbow'];
                 //w = 22
@@ -55,12 +55,18 @@ var getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-
+var clickall = function(){
+    document.getElementById('wep1but').click();
+    document.getElementById('wep2but').click();
+    document.getElementById('sidebut').click();
+    document.getElementById('melbut').click();
+    document.getElementById('transbut').click();
+}
 var clickfun = function(name, boxid){
-    weproll = getRandomInt(0, (w+1));
-    transroll = getRandomInt(0, (t+1));
-    sideroll = getRandomInt(0, (s+1));
-    melroll = getRandomInt(0, (m+1));
+    weproll = getRandomInt(0, (w));
+    transroll = getRandomInt(0, (t));
+    sideroll = getRandomInt(0, (s));
+    melroll = getRandomInt(0, (m));
     if (name == "Weapon"){
     textput = name+": "+weapon[weproll]}
     if (name == "Sidearm"){
