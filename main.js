@@ -25,8 +25,8 @@ var weapon = ['None',
               'UMP9',
               'Vector',
               'Tommy Gun',
-              'double-barrel',
-              'pump-shotgun',
+              'S686',
+              'S1897',
               'S12K',
               'M249',
               'Crossbow'];
@@ -40,10 +40,10 @@ var sidearm = ['None',
                 //s = 5
 var s = 5;
 var melee = ['None', 
-             'pan', 
-             'crowbar', 
-             'machete', 
-             'sickle']
+             'Pan', 
+             'Crowbar', 
+             'Machete', 
+             'Sickle']
              //m = 5
 var m = 5;
 var textput;
@@ -78,14 +78,45 @@ var clickfun = function(name, boxid){
     
     document.getElementById(boxid).innerHTML = textput;
     }
+
 var wepool = function(){
-    x= 8;
+    x = 8;
     while (x>0){
-        clickfun('Weapon', 'poolbox'+x);
+        clickfun('Weapon', 'poolbox'+(x+12))
         x = (x-1);
     }
-    
 }
+var sidepool = function(){
+    x = 4;
+    while (x>0){
+        clickfun('Sidearm', 'poolbox'+(x+8))
+        x = (x-1);
+    }
+}
+var melpool = function(){
+    x = 4;
+    while (x>0){
+        clickfun('Melee', 'poolbox'+(x+4))
+        x = (x-1);
+    }
+}
+var transpool = function(){
+    x = 4;
+    while (x>0){
+        clickfun('Transport', 'poolbox'+x)
+        x = (x-1);
+    }
+}
+var rollpool = function(){
+    wepool();
+    sidepool();
+    melpool();
+    transpool();
+}
+
     
     
+
+    
+
     
