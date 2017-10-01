@@ -78,7 +78,14 @@ var clickfun = function(name, boxid){
     
     document.getElementById(boxid).innerHTML = textput;
     }
-
+var wepool = function(){
+    x= 8;
+    while (x>0){
+        clickfun('Weapon', 'poolbox'+x);
+        x = (x-1);
+    }
+    
+}
     
     
     
