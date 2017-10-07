@@ -117,5 +117,11 @@ var transpool = function(){
         transx = (transx-1);
     }
 }
-    
+
+var squadroll = function(){
+    playerroll("yellow");
+    playerroll("blue");
+    playerroll("green");
+    playerroll("red");
+}
     
