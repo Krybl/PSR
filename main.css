@@ -76,3 +76,14 @@ body{
 }
 .colortext{
     width: 175px;
+}
+.randall{
+    color: azure;
+    background-color: black;
+    width: 895px;
+    height: 75px;
+    position: absolute;
+    top: 160px;
+    left: 5px
+    
+}
