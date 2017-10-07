@@ -4,7 +4,7 @@ var transport = ['no boats',
                  'no 3-seater',
                  'no buggy',
                  'no UAZ',
-                 'walk'];
+                 'no passengers'];
                 //t = 7
 
 var t = 7;
@@ -47,6 +47,11 @@ var melee = ['None',
              //m = 5
 var m = 5;
 var textput;
+var players;
+var wepx;
+var sidex;
+var melx;
+var transx;
 
 
 var getRandomInt = function(min, max) {
@@ -66,7 +71,7 @@ var clickfun = function(name, boxid){
     weproll = getRandomInt(0, (w));
     transroll = getRandomInt(0, (t));
     sideroll = getRandomInt(0, (s));
-    melroll = getRandomInt(0, (m));
+    melroll = getRandomInt(0, (m));  
     if (name == "Weapon"){
     textput = name+": "+weapon[weproll]}
     if (name == "Sidearm"){
@@ -79,44 +84,38 @@ var clickfun = function(name, boxid){
     document.getElementById(boxid).innerHTML = textput;
     }
 
-var wepool = function(){
-    x = 8;
-    while (x>0){
-        clickfun('Weapon', 'poolbox'+(x+12))
-        x = (x-1);
+var playerroll = function(color){
+    
+    clickfun("Weapon", color+"wep1");
+    clickfun("Weapon", color+"wep2");
+    clickfun("Sidearm", color+"side");
+    clickfun("Melee", color+"mel");
+    clickfun("Transport", color+"trans");
     }
-}
+
 var sidepool = function(){
-    x = 4;
-    while (x>0){
-        clickfun('Sidearm', 'poolbox'+(x+8))
-        x = (x-1);
+    players = document.getElementById('players').value;
+    sidex = players;
+    while (sidex>0){
+        clickfun('Sidearm', 'sidepool'+sidex)
+        sidex = (sidex-1);
     }
 }
 var melpool = function(){
-    x = 4;
-    while (x>0){
-        clickfun('Melee', 'poolbox'+(x+4))
-        x = (x-1);
+    players = document.getElementById('players').value;
+    melx = players;
+    while (melx>0){
+        clickfun('Melee', 'melpool'+melx)
+        melx = (melx-1);
     }
 }
 var transpool = function(){
-    x = 4;
-    while (x>0){
-        clickfun('Transport', 'poolbox'+x)
-        x = (x-1);
+    players = document.getElementById('players').value;
+    transx = players;
+    while (transx>0){
+        clickfun('Transport', 'transpool'+transx)
+        transx = (transx-1);
     }
 }
-var rollpool = function(){
-    wepool();
-    sidepool();
-    melpool();
-    transpool();
-}
-
     
-    
-
-    
-
     

@@ -1,4 +1,6 @@
-
+body{
+    background: darkgray;
+}
 .button {
     
 }
@@ -11,10 +13,66 @@
     width: 200px;
     height: 100px;
 }
-.linebox{
-    background: green;
-    display: inline;
-    width: 500px;
-    height: 500px;
+.yellowbox {
+    color: black;
+    padding: 5px;
+    background-color: yellow;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gold;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 130px;
     
 }
+.bluebox {
+    color: black;
+    padding: 5px;
+    background-color: skyblue;
+    border-width: 5px;
+    border-style: solid;
+    border-color: blue;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 130px;
+    
+}
+
+.greenbox {
+    color: black;
+    padding: 5px;
+    background-color: lightgreen;
+    border-width: 5px;
+    border-style: solid;
+    border-color: green;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 130px;
+    
+}
+.redbox {
+    color: black;
+    padding: 5px;
+    background-color: lightcoral;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+    display: inline-block;
+    position: relative;
+  width: 200px;
+    height: 130px;
+    
+}
+.refresh {
+    display: inline;
+    position: relative;
+    top: 5px;
+    left: 175px;
+    width: 20px;
+    height: 20px;
+}
+.colortext{
+    width: 175px;
